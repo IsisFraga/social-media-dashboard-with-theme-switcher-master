@@ -1,0 +1,34 @@
+header {
+    width: 100%;
+    justify-content: center;
+
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1,
+        h3 {
+            text-align: left;
+            width: 80%;
+        }
+
+        .line {
+            border-top: 1px solid $secondary-text-color;
+            content: " ";
+            width: 80%;
+        }
+
+        .changeMode {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: $secondary-text-color;
+            font-weight: 700;
+            font-size: 0.85em;
+            padding: 1em 0;
+            width: 80%;
+        }
+    }
+}
