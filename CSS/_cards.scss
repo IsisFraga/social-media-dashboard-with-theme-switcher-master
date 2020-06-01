@@ -1,5 +1,5 @@
 .cards {
-    width: 80%;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -13,13 +13,89 @@
         .instagram,
         .youtube {
             width: 100%;
-            height: 12em;
-            margin: 1em 0 0 0;
+            height: 13rem;
+            margin: 1rem 0 0 0;
             margin-right: 0;
-            padding: 1em;
             background-color: $dark-cards-color;
             flex-direction: column;
             border-radius: 5px;
+            justify-content: center;
+
+            .today {
+                display: inline-flex;
+                align-items: center;
+                padding-top: 2em;
+
+                img {
+                    height: fit-content;
+                    vertical-align: middle;
+                    justify-content: center;
+                }
+                .updown {
+                    padding-left: 0.5em;
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        .facebook {
+            border-top: 0.3em solid $facebook-color;
+        }
+        .twitter {
+            border-top: 0.3em solid $twitter-color;
+
+            .today {
+                color: $green;
+            }
+        }
+
+        .instagram {
+            border: 1em solid;
+            border-image: linear-gradient(45deg, $instagram-first-color, $instagram-second-color);
+            .today {
+                color: $green;
+            }
+        }
+
+        .youtube {
+            border-top: 0.3em solid $youtube-color;
+            .today {
+                color: $red;
+            }
+        }
+
+        .logo-account {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            vertical-align: middle;
+            padding-top: 1em;
+
+            img {
+                height: fit-content;
+            }
+        }
+
+        .account {
+            color: $secondary-text-color;
+            font-size: 0.7em;
+            padding-left: 0.7em;
+            padding-top: 0.3em;
+        }
+
+        .number {
+            font-weight: 700;
+            font-size: 3.3em;
+            padding-top: 1rem;
+        }
+
+        .followers {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 0.7em;
+            color: $secondary-text-color;
+            letter-spacing: 0.5em;
+            padding-top: 0.4em;
         }
     }
 }
