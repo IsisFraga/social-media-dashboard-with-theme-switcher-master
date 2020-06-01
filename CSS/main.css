@@ -28,7 +28,7 @@ main {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 h3 {
@@ -42,6 +42,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 3em 0 1em 0;
 }
 
 header .header {
@@ -64,10 +65,15 @@ header .header h3 {
   width: 80%;
 }
 
+header .header h3 {
+  margin-top: 0.5em;
+}
+
 header .header .line {
-  border-top: 1px solid #8b97c6;
+  border-top: 1px solid #252a41;
   content: " ";
   width: 80%;
+  margin: 1em 0 0.3em 0;
 }
 
 header .header .changeMode {
@@ -154,7 +160,7 @@ header .header .changeMode {
 }
 
 .cards {
-  width: 80%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,16 +182,125 @@ header .header .changeMode {
 .cards .media-cards .instagram,
 .cards .media-cards .youtube {
   width: 100%;
-  height: 12em;
-  margin: 1em 0 0 0;
+  height: 13rem;
+  margin: 1rem 0 0 0;
   margin-right: 0;
-  padding: 1em;
   background-color: #252a41;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards .media-cards .facebook .today,
+.cards .media-cards .twitter .today,
+.cards .media-cards .instagram .today,
+.cards .media-cards .youtube .today {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+}
+
+.cards .media-cards .facebook .today img,
+.cards .media-cards .twitter .today img,
+.cards .media-cards .instagram .today img,
+.cards .media-cards .youtube .today img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards .media-cards .facebook .today .updown,
+.cards .media-cards .twitter .today .updown,
+.cards .media-cards .instagram .today .updown,
+.cards .media-cards .youtube .today .updown {
+  padding-left: 0.5em;
+  font-size: 0.8em;
+}
+
+.cards .media-cards .facebook {
+  border-top: 0.3em solid #006fff;
+}
+
+.cards .media-cards .twitter {
+  border-top: 0.3em solid #1ca0f2;
+}
+
+.cards .media-cards .twitter .today {
+  color: #1db489;
+}
+
+.cards .media-cards .instagram {
+  border: 1em solid;
+  -o-border-image: linear-gradient(45deg, #df4996, #fdc468);
+     border-image: linear-gradient(45deg, #df4996, #fdc468);
+}
+
+.cards .media-cards .instagram .today {
+  color: #1db489;
+}
+
+.cards .media-cards .youtube {
+  border-top: 0.3em solid #c4032a;
+}
+
+.cards .media-cards .youtube .today {
+  color: #dc414c;
+}
+
+.cards .media-cards .logo-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
+  padding-top: 1em;
+}
+
+.cards .media-cards .logo-account img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.cards .media-cards .account {
+  color: #8b97c6;
+  font-size: 0.7em;
+  padding-left: 0.7em;
+  padding-top: 0.3em;
+}
+
+.cards .media-cards .number {
+  font-weight: 700;
+  font-size: 3.3em;
+  padding-top: 1rem;
+}
+
+.cards .media-cards .followers {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.7em;
+  color: #8b97c6;
+  letter-spacing: 0.5em;
+  padding-top: 0.4em;
 }
 
 /* footer */
