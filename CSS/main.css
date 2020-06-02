@@ -28,13 +28,35 @@ main {
 }
 
 h1 {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 h3 {
   font-size: 0.8em;
   color: #8b97c6;
   padding-bottom: 1em;
+}
+
+img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.up,
+.down {
+  font-size: 0.8em;
+}
+
+.up {
+  color: #1db489;
+}
+
+.down {
+  color: #dc414c;
 }
 
 header {
@@ -70,7 +92,7 @@ header .header h3 {
 }
 
 header .header .line {
-  border-top: 1px solid #252a41;
+  border-top: 1px solid #2e3656;
   content: " ";
   width: 80%;
   margin: 1em 0 0.3em 0;
@@ -92,6 +114,14 @@ header .header .changeMode {
   font-size: 0.85em;
   padding: 1em 0;
   width: 80%;
+}
+
+header .header .changeMode .dark {
+  display: none;
+}
+
+header .header .changeMode .light {
+  display: inline;
 }
 
 .changeMode {
@@ -184,6 +214,7 @@ header .header .changeMode {
   width: 100%;
   height: 13rem;
   margin: 1rem 0 0 0;
+  padding-top: 0.8rem;
   margin-right: 0;
   background-color: #252a41;
   -webkit-box-orient: vertical;
@@ -206,20 +237,7 @@ header .header .changeMode {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 2em;
-}
-
-.cards .media-cards .facebook .today img,
-.cards .media-cards .twitter .today img,
-.cards .media-cards .instagram .today img,
-.cards .media-cards .youtube .today img {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  vertical-align: middle;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-top: 1.5em;
 }
 
 .cards .media-cards .facebook .today .updown,
@@ -227,7 +245,6 @@ header .header .changeMode {
 .cards .media-cards .instagram .today .updown,
 .cards .media-cards .youtube .today .updown {
   padding-left: 0.5em;
-  font-size: 0.8em;
 }
 
 .cards .media-cards .facebook {
@@ -238,26 +255,20 @@ header .header .changeMode {
   border-top: 0.3em solid #1ca0f2;
 }
 
-.cards .media-cards .twitter .today {
-  color: #1db489;
-}
-
 .cards .media-cards .instagram {
-  border: 1em solid;
-  -o-border-image: linear-gradient(45deg, #df4996, #fdc468);
-     border-image: linear-gradient(45deg, #df4996, #fdc468);
+  padding-top: 0;
+  overflow: hidden;
 }
 
-.cards .media-cards .instagram .today {
-  color: #1db489;
+.cards .media-cards .instagram .border {
+  width: 100%;
+  height: 0.3em;
+  background: -webkit-gradient(linear, right top, left top, from(#df4996), to(#fdc468));
+  background: linear-gradient(to left, #df4996, #fdc468);
 }
 
 .cards .media-cards .youtube {
   border-top: 0.3em solid #c4032a;
-}
-
-.cards .media-cards .youtube .today {
-  color: #dc414c;
 }
 
 .cards .media-cards .logo-account {
@@ -273,12 +284,6 @@ header .header .changeMode {
           justify-content: center;
   vertical-align: middle;
   padding-top: 1em;
-}
-
-.cards .media-cards .logo-account img {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .cards .media-cards .account {
@@ -301,6 +306,86 @@ header .header .changeMode {
   color: #8b97c6;
   letter-spacing: 0.5em;
   padding-top: 0.4em;
+}
+
+.cards-today h1 {
+  text-align: left;
+  padding: 1.5em 0 0.8em 0;
+}
+
+.cards-today .youtube-today {
+  margin-bottom: 1em;
+}
+
+.cards-today .views,
+.cards-today .likes {
+  background-color: #252a41;
+  border-radius: 5px;
+  width: 100%;
+  height: 8em;
+  margin-top: 1rem;
+  padding: 1.7em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards-today .views .secondary-title,
+.cards-today .likes .secondary-title {
+  color: #8b97c6;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.cards-today .views .data,
+.cards-today .likes .data {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.cards-today .views .left,
+.cards-today .likes .left {
+  text-align: left;
+}
+
+.cards-today .views .left .data,
+.cards-today .likes .left .data {
+  padding-top: 0.7em;
+}
+
+.cards-today .views .right,
+.cards-today .likes .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.cards-today .views .right .percent,
+.cards-today .likes .right .percent {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+  text-align: right;
+}
+
+.cards-today .views .right .percent .value,
+.cards-today .likes .right .percent .value {
+  padding-left: 0.3em;
 }
 
 /* footer */
