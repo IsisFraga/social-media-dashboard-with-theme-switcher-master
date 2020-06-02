@@ -20,7 +20,7 @@ header {
         }
 
         .line {
-            border-top: 1px solid $dark-cards-color;
+            border-top: 1px solid $dark-line-color;
             content: " ";
             width: 80%;
             margin: 1em 0 0.3em 0;
@@ -30,11 +30,19 @@ header {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            color: $secondary-text-color;
+            color: $dark-secondary-text-color;
             font-weight: 700;
             font-size: 0.85em;
             padding: 1em 0;
             width: 80%;
+
+            .dark {
+                display: none;
+            }
+
+            .light {
+                display: inline;
+            }
         }
     }
 }

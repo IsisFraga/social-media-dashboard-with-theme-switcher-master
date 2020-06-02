@@ -1,0 +1,59 @@
+.cards-today {
+    h1 {
+        text-align: left;
+        padding: 1.5em 0 0.8em 0;
+    }
+
+    .youtube-today {
+        margin-bottom: 1em;
+    }
+
+    .views,
+    .likes {
+        background-color: $dark-cards-color;
+        border-radius: 5px;
+        width: 100%;
+        height: 8em;
+        margin-top: 1rem;
+        padding: 1.7em;
+        display: inline-flex;
+        justify-content: space-between;
+
+        .secondary-title {
+            color: $dark-secondary-text-color;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+
+        .data {
+            color: #fff;
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .left {
+            text-align: left;
+
+            .data {
+                padding-top: 0.7em;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .percent {
+                display: inline-flex;
+                align-items: center;
+                padding-top: 2em;
+                text-align: right;
+
+                .value {
+                    padding-left: 0.3em;
+                }
+            }
+        }
+    }
+}
